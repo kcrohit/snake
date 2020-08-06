@@ -14,13 +14,11 @@ node ('snake-app'){
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com', 'training_creds') {
+     docker.withRegistry('https://registry.hub.docker.com', 'dockerid') {
             app.push("latest")
         			}
          }
-    stage('SECURITY-IMAGE-SCANNER'){
-        build 'SECURITY-IMAGE-SCANNER-AQUAMICROSCANNER'
-    }
+   
   
     
     stage('Pull-image-server') {
