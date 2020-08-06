@@ -4,9 +4,7 @@ node ('snake-app'){
         /* Let's make sure we have the repository cloned to our workspace */
        checkout scm
     }  
-    stage('SAST'){
-        build 'SECURITY-SAST-SNYK'
-    }
+    
 
     
     stage('Build-and-Tag') {
