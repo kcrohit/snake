@@ -27,9 +27,6 @@ node ('snake-app'){
          sh "docker-compose up -d"	
       }
     
-    stage('DAST')
-        {
-        build 'SECURITY-DAST-OWASP_ZAP'
-        }
+    
  
 }
