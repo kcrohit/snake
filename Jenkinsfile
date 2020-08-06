@@ -24,6 +24,7 @@ node ('snake-app'){
     stage('Pull-image-server') {
          sh "cd /home/jenkins/jenkins_workspace/workspace"
          sh "docker-compose down"
+         sh "cd /home/jenkins/jenkins_workspace/workspace/snake1"
          sh "docker-compose up -d"	
       }
     
